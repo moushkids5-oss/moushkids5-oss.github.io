@@ -8,7 +8,8 @@
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  /* 🐉 New reliable dragon background */
+  background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/dragon-2028135_1280.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #3b2f2f;
 }
@@ -56,6 +57,26 @@ section {
   min-height: 100px;
   border-radius: 10px;
   background-color: #fff9f0;
+}
+.link-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+.link-section button {
+  padding: 10px 15px;
+  background-color: #e76f51;
+  color: #f4f1de;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.link-section button:hover {
+  background-color: #f4a261;
+}
 .library-content {
   display: none;
   margin-top: 20px;
@@ -76,23 +97,26 @@ footer {
 </head>
 <body>
 
-<header>🐉 Dragons, James & Jesus Library 📖</header>
+<header>🐉 Dragons & Jesus Library 📖</header>
 
 <nav>
 <button onclick="showSection('dragons')">Dragons</button>
 <button onclick="showSection('books')">Books</button>
 <button onclick="showSection('jesus')">Jesus</button>
-
+<button onclick="showSection('links')">Library</button>
 <button onclick="addBook()">Add New Book</button>
 </nav>
 
 <section id="dragons" class="editable" contenteditable="true">
+Write about dragons here...
 </section>
 
 <section id="books" class="editable" contenteditable="true" style="display:none;">
+Write about your books here...
 </section>
 
 <section id="jesus" class="editable" contenteditable="true" style="display:none;">
+Write about Jesus here...
 </section>
 
 <section id="links" class="link-section" style="display:none;">
